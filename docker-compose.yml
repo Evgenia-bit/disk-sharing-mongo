@@ -1,0 +1,25 @@
+version: '3.0'
+
+services:
+  main:
+    container_name: main
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - 3034:3034
+    command: node disksharing.js
+    depends_on:
+      - mongodb
+    restart: always
+  mongodb:
+    container_name: mongo
+    image: mongo
+    env_file:
+      - .env
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db/init.js:/docker-entrypoint-initdb.d/init.js
+    restart: always
