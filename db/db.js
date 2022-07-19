@@ -1,20 +1,23 @@
+const path = require("path")
 const mongoose = require('mongoose')
-const path = require("path");
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
+
 const Person = require('../models/Person')
 const TakenItem = require('../models/TakenItem')
+
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 
 mongoose.connect(process.env.ME_CONFIG_MONGODB_URL)
     .then(() =>{console.log('Connection to MongoDB is established')})
     .catch(err => {
-            console.error('App starting error:', err.message);
-            process.exit(1);
-    });
-
+            console.error('App starting error:', err.message)
+            process.exit(1)
+    })
 
 
 module.exports = {
-    getPerson: async (nickname) => Person.findOne({nickname}),
+    getPerson: async (nickname) => {
+        return await Person.findOne({nickname})
+    },
     getOwnDisks: async (person_id) => {
         const result = await TakenItem.aggregate([
             {

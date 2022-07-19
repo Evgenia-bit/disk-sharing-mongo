@@ -79,5 +79,5 @@ module.exports = {
         } catch (err) {
             res.status(500).json({status: 'error', msg: 'Произошла ошибка: ' + err.message})
         }
-    },
+    }
 }

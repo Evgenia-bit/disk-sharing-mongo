@@ -1,5 +1,5 @@
+const bcrypt = require('bcrypt')
 const db = require('../db/db')
-const bcrypt = require('bcrypt');
 
 module.exports = {
     authorization: async (req, res) => {
