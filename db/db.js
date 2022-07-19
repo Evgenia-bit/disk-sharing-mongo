@@ -5,15 +5,12 @@ const Person = require('../models/Person')
 const TakenItem = require('../models/TakenItem')
 
 mongoose.connect(process.env.ME_CONFIG_MONGODB_URL)
+    .then(() =>{console.log('Connection to MongoDB is established')})
+    .catch(err => {
+            console.error('App starting error:', err.message);
+            process.exit(1);
+    });
 
-const db = mongoose.connection
-
-db.on('error', err => {
-    console.log('Ошибка MongoDB: ', err.message)
-    process.exit(1)
-})
-
-db.once('open', () => console.log('Установлено соединение с MongoDB'))
 
 
 module.exports = {
