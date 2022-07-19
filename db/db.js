@@ -3,7 +3,7 @@ const path = require("path");
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const Person = require('../models/Person')
 const TakenItem = require('../models/TakenItem')
-console.log(process.env.ME_CONFIG_MONGODB_URL)
+
 mongoose.connect(process.env.ME_CONFIG_MONGODB_URL)
 
 const db = mongoose.connection
@@ -147,7 +147,6 @@ module.exports = {
        }
     },
     takeDisk: async (person_id, diskId) => {
-        console.log(diskId)
         const res = await TakenItem.updateOne({diskId:  mongoose.Types.ObjectId(diskId)}, {holderId: person_id})
         return res.acknowledged
     }
