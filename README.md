@@ -38,4 +38,10 @@ npm install
 npm prefill 
 npm run start
 ```
-
+ ### Технологии
+ 
+* node.js
+* express
+* MongoDB
+* Docker
+Аналогичный сервис на PostgreSQL доступен по ссылке: https://github.com/Evgenia-bit/disk-sharing-postgres
