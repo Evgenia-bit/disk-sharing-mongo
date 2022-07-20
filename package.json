@@ -4,7 +4,8 @@
   "description": "",
   "main": "disksharing.js",
   "scripts": {
-    "test": "node disksharing.js",
+    "prefill": "mongo disk-sharing db/init.js",
+    "start": "node disksharing.js",
     "dev": "nodemon disksharing.js"
   },
   "author": "",
