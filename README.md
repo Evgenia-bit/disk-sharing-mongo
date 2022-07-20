@@ -44,4 +44,6 @@ npm run start
 * express
 * MongoDB
 * Docker
+
+
 Аналогичный сервис на PostgreSQL доступен по ссылке: https://github.com/Evgenia-bit/disk-sharing-postgres
