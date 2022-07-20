@@ -1,3 +1,4 @@
+db.people.remove({});
 db.people.insert(
     {
         "_id" : ObjectId("62a891fc53893fb6b920ebfb"),
@@ -16,6 +17,7 @@ db.people.insert(
         "nickname" : "Катя",
         "password" : "$2b$05$wYKtsJ2Aic3LrihjYloSOOdVTcduytfOAXeyCBF8imWcRYLUiEoYi"
 });
+db.disks.remove({});
 db.disks.insert(
     {
         "_id" : ObjectId("62a891fc53893fb6b920ec01"),
@@ -61,6 +63,7 @@ db.disks.insert(
         "_id" : ObjectId("62a891fc53893fb6b920ec11"),
         "name" : "Лучшие песни лета 2017",
 });
+db.takenitems.remove({});
 db.takenitems.insert(
     {
         "_id" : ObjectId("62a891fc53893fb6b920ec11"),
@@ -96,7 +99,6 @@ db.takenitems.insert(
         "holderId" : ObjectId("62a891fc53893fb6b920ebfc"),
         "diskId" : ObjectId("62a891fc53893fb6b920ec08"),
 });
-
 db.takenitems.insert(
     {
         "_id" : ObjectId("62a891fc53893fb6b920ec1d"),
