@@ -8,7 +8,7 @@
     "start": "node disksharing.js",
     "dev": "nodemon disksharing.js"
   },
-  "author": "",
+  "author": "Evgenia Mochalina",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
