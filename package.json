@@ -1,7 +1,7 @@
 {
   "name": "disk-sharing",
   "version": "1.0.0",
-  "description": "",
+  "description": "DVD Exchange service",
   "main": "disksharing.js",
   "scripts": {
     "prefill": "mongo disk-sharing db/init.js",
